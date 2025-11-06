@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>TCC Dâmaris</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    
+    header {
+      background: #1B263B;
+      color: #E0E1DD;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    header .logo {
+      font-weight: 700;
+      font-size: 22px;
+      color: #E0E1DD;
+      text-decoration: none;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav ul li a {
+   	 text-decoration: none;
+  	color: white;
+  	font-size: 18px;
+  	font-weight: 600;
+  	padding: 8px 15px;
+  	border-radius: 5px;
+  	transition: 0.3s;
+    }
+
+    header nav ul li a:hover {
+   	background-color: white;
+  	color: black;
+    }
+
+
+    .hero {
+      height: 500px;
+      background: linear-gradient(135deg, #415A77, #1B263B);
+      color: #E0E1DD;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+ 
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+
+    .sobre {
+      padding: 60px 20px;
+      background: #F4F4F4;
+      text-align: center;
+    }
+
+    .sobre h2 {
+      color: #1B263B;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .sobre p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .forcas {
+      padding: 60px 20px;
+      background: #E0E1DD;
+    }
+
+    .forcas h2 {
+      text-align: center;
+      color: #1B263B;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #1B263B;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+
+    .destaque {
+      background: #415A77;
+      color: #E0E1DD;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .destaque h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .destaque p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+
+
+    footer {
+      background: #1B263B;
+      color: #E0E1DD;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+
+    #topo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1B263B;
+      color: white;
+      padding: 12px 17px;
+      border-radius: 50%;
+      display: none;
+      font-size: 20px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    #topo:hover {
+      background: #415A77;
+      transform: scale(1.1);
+    }
+
+.card a.botao {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1B263B;
+  color: #E0E1DD;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card a.botao:hover {
+  background-color: #415A77;
+  color: white;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">Mulheres nas Forças Armadas</a>
+    <nav>
+      <ul>
+   	 <li><a href="#inicio">Início</a></li>
+   	 <li><a href="#sobre">Sobre</a></li>
+<li><a href="#Dificuldade">Dificuldade</a></li>
+ <li><a href="#tecnologia">Tecnologia</a></li>
+   	 <li><a href="#forcas">Forças</a></li>
+   	
+  
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="inicio">
+    <h1>A Inclusão das mulheres nas Forças Armadas</h1>
+    <p>Descubra como as mulheres transformaram o cenário militar no Brasil e conquistaram novos espaços de liderança, operação e inovação.</p>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <h2>Sobre o Projeto</h2>
+    <p>Nos últimos anos, a presença feminina nas Forças Armadas brasileiras tem crescido de forma significativa,
+    refletindo avanços sociais, novas políticas públicas e o reconhecimento do potencial das mulheres no campo militar.
+    Esse movimento é resultado de um processo histórico marcado por desafios, conquistas e transformações sociais.
+    A cada década, o espaço ocupado pelas mulheres dentro da carreira militar se amplia, evidenciando sua capacidade de liderança,
+    competência técnica e contribuição para o desenvolvimento da defesa nacional.
+    Esta página busca contextualizar a importância da inclusão feminina no meio militar,
+    apresentando suas motivações, as barreiras enfrentadas e os avanços alcançados até o momento, inspirando novas gerações a compreender e valorizar esse processo histórico.
+  </p>
+ 
+  </section>
+ 
+   <section class="sobre" id="Dificuldade">
+    <h2>Dificuldades</h2>
+    <p>A presença feminina nas Forças Armadas brasileiras representa um marco importante nas discussões sobre igualdade de gênero,
+    refletindo a conquista de espaços historicamente ocupados por homens. Desde o passado, quando mulheres precisavam se disfarçar para atuar em combates ou se limitavam a funções voluntárias,
+    como enfermagem, até exemplos marcantes como Maria Quitéria, em 1823, e Ana Vieira da Silva, em 1932, a trajetória feminina no meio militar foi marcada por desafios e resistências. A inclusã
+    o formal ocorreu em 1944, com a participação voluntária na Segunda Guerra Mundial, sendo ampliada em 1980 com a criação do Corpo Auxiliar Feminino do Exército e da Reserva Feminina da Marinha,
+    que abriram espaço para cargos administrativos, saúde, engenharia e mecânica. Apesar dos avanços, ainda persistem obstáculos como a cultura organizacional predominantemente masculina, estereótipos de gênero,
+    barreiras simbólicas à ascensão hierárquica, desigualdades no acesso a funções de combate e escolas de elite,
+    além de problemas recorrentes como assédio, dificuldades de conciliar vida pessoal e profissional e a ausência de políticas institucionais voltadas à equidade.
+    Assim, mesmo que as mulheres estejam legalmente aptas a ocupar diversos cargos, restrições não oficiais ainda limitam sua progressão e o pleno exercício da liderança,
+    tornando a luta por inclusão plena e reconhecimento uma realidade contínua dentro das instituições militares.
+  </p>
+  </section>
+
+ <section class="sobre" id="tecnologia">
+    <h2>Tecnologias</h2>
+    <p>A tecnologia tem sido uma aliada fundamental na inclusão das mulheres na carreira militar brasileira.
+    Avanços como automação de equipamentos, sistemas digitais de comando e controle, armamentos de precisão, simuladores e realidade virtual diminuem a dependência da força física,
+    permitindo maior igualdade de condições no treinamento e no desempenho de funções estratégicas.
+    Plataformas digitais de ensino à distância ampliam o acesso à formação e especialização, favorecendo a ascensão feminina a cargos de liderança. No Brasil, a modernização tecnológica acompanha a abertura das instituições militares à participação feminina, com o uso de simuladores, plataformas remotas e projetos inovadores que ampliam o acesso a treinamentos operacionais.
+    Esses avanços fortalecem a equidade de gênero nas Forças Armadas, ampliando o espaço das mulheres em funções técnicas e estratégicas e contribuindo para ambientes mais democráticos e inclusivos.
+  </p>
+  </section>
+ 
+ 
+  <section class="forcas" id="forcas">
+    <h2>Forças Armadas</h2>
+    <div class="cards">
+      <div class="card">
+   	 <div class="card-icon">✈️</div>
+   	 <h3>Aeronáutica</h3>
+   	 <p>Pilotas, engenheiras aeronáuticas, controladoras de tráfego aéreo e líderes operacionais marcam presença crescente.</p>
+   	  <a href="aeronautica.html" class="botao"> saiba mais </a>
+    </div>
+      <div class="card">
+   	 <div class="card-icon">🚢</div>
+   	 <h3>Marinha</h3>
+   	 <p>Mulheres atuam em engenharia naval, operações embarcadas e comando de unidades marítimas estratégicas.</p>
+   	  <a href="marinha.html" class="botao"> saiba mais </a>
+  </div>
+      <div class="card">
+   	 <div class="card-icon">🪖</div>
+   	 <h3>Exército</h3>
+   	 <p>Presentes em logística, saúde, tecnologia e liderança de tropas, mulheres ampliam seu papel no Exército.</p>
+   	  <a href="exercito.html" class="botao"> saiba mais </a>
+    </div>
+  </section>
+
+  <section class="destaque">
+    <h2>Mais que Inclusão, Transformação</h2>
+    <p>O aumento da participação feminina não é apenas uma questão de números. É uma mudança cultural profunda que traz diversidade, novas perspectivas e inovação para as Forças Armadas.</p>
+    
+  </section>
+
+ 
+
+  <footer>
+    © Dâmaris 2025 - Inclusão Feminina nas Forças Armadas | TCC
+  </footer>
+
+  <a href="#inicio" id="topo"></a>
+
+
+
+</body>
+</html>
+

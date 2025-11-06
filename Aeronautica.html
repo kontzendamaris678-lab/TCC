@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>TCC Dâmaris</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+	* {
+  	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
+  	font-family: 'Montserrat', sans-serif;
+	}
+
+	html {
+  	scroll-behavior: smooth;
+	}
+
+	header {
+  	background: #1B263B;
+  	color: #E0E1DD;
+  	padding: 20px 40px;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	z-index: 1000;
+  	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+	}
+
+	header .logo {
+  	font-weight: 700;
+  	font-size: 22px;
+  	color: #E0E1DD;
+  	text-decoration: none;
+	}
+
+	header nav ul {
+  	list-style: none;
+  	display: flex;
+  	gap: 20px;
+	}
+
+	header nav ul li a {
+  	text-decoration: none;
+  	color: white;
+  	font-size: 18px;
+  	font-weight: 600;
+  	padding: 8px 15px;
+  	border-radius: 5px;
+  	transition: 0.3s;
+	}
+
+	header nav ul li a:hover {
+  	background-color: white;
+  	color: black;
+	}
+
+	.hero {
+  	height: 500px;
+  	background: linear-gradient(135deg, #415A77, #1B263B);
+  	color: #E0E1DD;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+  	padding: 0 20px;
+	}
+
+	.hero h1 {
+  	font-size: 42px;
+  	margin-bottom: 15px;
+	}
+
+	.hero p {
+  	font-size: 18px;
+  	max-width: 700px;
+  	line-height: 1.6;
+	}
+
+	.sobre {
+  	padding: 60px 20px;
+  	background: #F4F4F4;
+  	text-align: center;
+	}
+
+	.sobre h2 {
+  	color: #1B263B;
+  	margin-bottom: 20px;
+  	font-size: 28px;
+	}
+
+	.sobre p {
+  	max-width: 800px;
+  	margin: 0 auto;
+  	line-height: 1.7;
+  	color: #333;
+	}
+
+	.forcas {
+  	padding: 60px 20px;
+  	background: #E0E1DD;
+	}
+
+	.forcas h2 {
+  	text-align: center;
+  	color: #1B263B;
+  	margin-bottom: 40px;
+  	font-size: 28px;
+	}
+
+	.cards {
+  	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  	gap: 20px;
+  	max-width: 1000px;
+  	margin: 0 auto;
+	}
+
+	.card {
+  	background: white;
+  	padding: 30px 20px;
+  	border-radius: 10px;
+  	text-align: center;
+  	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  	transition: transform 0.3s;
+	}
+
+	.card:hover {
+  	transform: translateY(-5px);
+	}
+
+	.card-icon {
+  	font-size: 50px;
+  	margin-bottom: 15px;
+	}
+
+	.card h3 {
+  	color: #1B263B;
+  	margin-bottom: 10px;
+	}
+
+	.card p {
+  	color: #333;
+  	line-height: 1.6;
+	}
+
+	.destaque {
+  	background: #415A77;
+  	color: #E0E1DD;
+  	padding: 60px 20px;
+  	text-align: center;
+	}
+
+	.destaque h2 {
+  	font-size: 28px;
+  	margin-bottom: 20px;
+	}
+
+	.destaque p {
+  	max-width: 700px;
+  	margin: 0 auto;
+  	line-height: 1.6;
+  	font-size: 18px;
+	}
+
+	footer {
+  	background: #1B263B;
+  	color: #E0E1DD;
+  	text-align: center;
+  	padding: 20px;
+  	font-size: 14px;
+	}
+
+	#topo {
+  	position: fixed;
+  	bottom: 30px;
+  	right: 30px;
+  	background: #1B263B;
+  	color: white;
+  	padding: 12px 17px;
+  	border-radius: 50%;
+  	display: none;
+  	font-size: 20px;
+  	text-decoration: none;
+  	transition: transform 0.3s;
+	}
+
+	#topo:hover {
+  	background: #415A77;
+  	transform: scale(1.1);
+	}
+
+	.card a.botao {
+  	display: inline-block;
+  	margin-top: 15px;
+  	padding: 10px 20px;
+  	background-color: #1B263B;
+  	color: #E0E1DD;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	font-weight: 600;
+  	transition: 0.3s;
+	}
+
+	.card a.botao:hover {
+  	background-color: #415A77;
+  	color: white;
+	}
+
+	.caixa-texto-centralizada {
+  	max-width: 1000px;
+  	margin: 60px auto;
+  	padding: 20px;
+  	background-color: #f0f8ff;
+	 
+  	border-radius: 8px;
+  	text-align: center;
+  	font-family: 'Montserrat', sans-serif;
+ 	 
+	}
+
+	.caixa-texto-centralizada h3 {
+  	color: #003366;
+  	margin-bottom: 20px;
+	}
+
+
+
+
+
+
+	
+  </style>
+</head>
+<body>
+
+  <header>
+
+	<a href="index.html" class="logo">Mulheres nas Forças Armadas</a>
+	<nav>
+  	<ul>
+    	<li><a href="tcc.html">Início</a></li>
+    	<li><a href="#sobre">Sobre</a></li>
+    	<li><a href="#forcas">Forças</a></li>
+    	<li><a href="#tecnologia">Tecnologia</a></li>
+  	</ul>
+	</nav>
+  </header>
+
+<section class="hero" id="inicio">
+  
+  <h1>Aeronáutica</h1>
+  <p>Descubra como as mulheres transformaram o cenário militar no Brasil e conquistaram novos espaços de liderança, operação e inovação.</p>
+</section>
+
+
+  <section class="sobre" id="sobre">
+	<h2>Sobre a Força Aérea Brasileira</h2>
+	<p>
+  	A Força Aérea Brasileira (FAB) tem desempenhado um papel fundamental na defesa do espaço aéreo nacional e no apoio a operações estratégicas em todo o país. A participação feminina na Aeronáutica vem crescendo ao longo das últimas décadas, refletindo avanços significativos em igualdade de gênero e inclusão nas Forças Armadas.
+  	Desde o ingresso limitado a funções administrativas, as mulheres conquistaram, gradualmente, o direito de atuar em diversas áreas, incluindo comando, pilotagem e operações técnicas. Hoje, a presença feminina na FAB representa não apenas uma evolução histórica, mas também a valorização do talento, da competência e da dedicação das mulheres na construção de uma força moderna, tecnológica e inclusiva.
+  	A trajetória das mulheres na Aeronáutica evidencia desafios superados, marcos históricos e conquistas importantes, mostrando que a igualdade de oportunidades é essencial para fortalecer a capacidade operacional e a inovação da Força Aérea Brasileira.
+	</p>
+  </section>
+
+
+
+  <section class="caixa-texto-centralizada">
+	<h3>Tecnologias na Aeronáutica </h3>
+	<p> A tecnologia é uma grande aliada na inclusão das mulheres na Aeronáutica, pois reduz barreiras físicas, promove treinamentos mais acessíveis e cria ambientes profissionais mais seguros. Por meio de simuladores de voo, equipamentos modernos e ergonômicos, sistemas digitais de gestão e plataformas online de recrutamento, é possível garantir igualdade na formação técnica e nas oportunidades de carreira. Além disso, o uso de inteligência artificial, monitoramento e análise de dados permite identificar obstáculos, melhorar políticas internas e fortalecer o respeito e a diversidade dentro da instituição. Dessa forma, a tecnologia não apenas amplia o acesso, mas também transforma a cultura organizacional, tornando a Aeronáutica mais inclusiva e preparada para o futuro.
+</p>
+
+  </section>
+ 
+    
+  <section class="caixa-texto-centralizada">
+	<h3>Formas de ingressos na Aeronáutica </h3>
+	<p>As mulheres podem ingressar na Aeronáutica por meio de concursos públicos e processos seletivos organizados pela Força Aérea Brasileira (FAB), abrangendo diversas áreas, como aviação, saúde, tecnologia, administração e manutenção. Entre as principais opções estão o Exame de Admissão ao Curso de Formação de Oficiais, o Curso de Formação de Sargentos (CFS), o Estágio de Adaptação à Graduação de Sargento (EAGS) e o Curso de Formação de Oficiais Especialistas (CFOE), além de vagas específicas para profissionais de nível superior, como médicas, engenheiras e técnicas.
+O alistamento feminino é voluntário, ou seja, não obrigatório como para os homens. As mulheres interessadas podem se inscrever nesses processos seletivos e escolher atuar conforme suas habilidades e formações. Esse modelo permite ampliar a diversidade, garantir oportunidades iguais de treinamento e progressão e fortalecer a presença feminina na Aeronáutica de forma organizada e crescente.
+
+  		</p>
+  </section>
+	<footer>
+	© Dâmaris 2025 - Inclusão Feminina nas Forças Armadas | TCC
+  </footer>
+
+  <a href="#inicio" id="topo"></a>
+ 
+
+
+</body>
+</html>
+
+
+
